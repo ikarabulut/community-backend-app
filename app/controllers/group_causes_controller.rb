@@ -1,0 +1,2 @@
+class GroupCausesController < ApplicationController
+end
