@@ -1,0 +1,2 @@
+class GroupCause < ApplicationRecord
+end
