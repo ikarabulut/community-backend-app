@@ -65,7 +65,7 @@ ActiveRecord::Schema.define(version: 2021_12_14_214153) do
   create_table "rsvps", force: :cascade do |t|
     t.integer "user_id"
     t.integer "event_id"
-    t.string "type"
+    t.string "rsvp_type"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

@@ -16,4 +16,10 @@ Rails.application.routes.draw do
   put "/events/:id" => "events#update"
   get "/events" => "events#index"
   get "/events/:id" => "events#show"
+
+### rsvp routes ###
+  post "events/:event_id/rsvps" => "rsvps#create"
+  get "/rsvps" => "rsvps#index"
+  get "/rsvps/:id" => "rsvps#show"
+  put "/rsvps/:id" => "rsvps#update"
 end

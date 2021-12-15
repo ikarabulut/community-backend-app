@@ -22,7 +22,7 @@ Content-Type: application/json
 # Create Group
 POST http://localhost:3000/groups
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2Mzk2ODI2NTh9.xeq7MFg-Jd-1cZVOwBT6-zOwBc-d480CPOP2JR2Z1Gs
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2Mzk2OTExMzF9.CNx0APMlsXCuZAAIaCy5zgfx2wgNllB_WzPOKfPUM5o
 
 {
   "name": "test group",
@@ -55,13 +55,13 @@ POST http://localhost:3000/groups/1/events
 Content-Type: application/json
 
 {
-  "name": "test event",
+  "name": "test event 2",
   "date": "2021/12/2",
   "start_time": "9:00",
   "duration": "90",
-  "address": "123 event st.",
-  "volunteers_needed": "20",
-  "description": "an event where we test things"
+  "address": "123 event 2 st.",
+  "volunteers_needed": "200",
+  "description": "an event where we test more things"
 }
 
 ### Update Event
@@ -78,7 +78,34 @@ GET http://localhost:3000/events
 Content-Type: application/json
 
 ### Event Show
-GET http://localhost:3000/events/3
+GET http://localhost:3000/events/2
 Content-Type: application/json
+
+### RSVP actions ###
+
+### Create rsvp
+POST http://localhost:3000/events/1/rsvps
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2Mzk2OTExMzF9.CNx0APMlsXCuZAAIaCy5zgfx2wgNllB_WzPOKfPUM5o
+
+{
+  "rsvp_type": "Attending"
+}
+
+### Index rsvp
+GET http://localhost:3000/rsvps
+Content-Type: application/json
+
+### Show rsvp
+GET http://localhost:3000/rsvps/1
+Content-Type: application/json
+
+### update rsvp
+PUT http://localhost:3000/rsvps/1
+Content-Type: application/json
+
+{
+  "rsvp_type": "Maybe"
+}
 
 
