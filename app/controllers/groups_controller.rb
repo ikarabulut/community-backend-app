@@ -12,7 +12,7 @@ class GroupsController < ApplicationController
     if group.save
       render json: group.as_json
     else
-      render json: {errors: product.errors.full_messages}, status: :unprocessable_entity
+      render json: {errors: event.errors.full_messages}, status: :unprocessable_entity
     end
   end
 

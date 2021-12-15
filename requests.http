@@ -48,3 +48,37 @@ Content-Type: application/json
 GET http://localhost:3000/groups/1
 Content-Type: application/json
 
+### Event Actions ###
+
+### Create Event
+POST http://localhost:3000/groups/1/events
+Content-Type: application/json
+
+{
+  "name": "test event",
+  "date": "2021/12/2",
+  "start_time": "9:00",
+  "duration": "90",
+  "address": "123 event st.",
+  "volunteers_needed": "20",
+  "description": "an event where we test things"
+}
+
+### Update Event
+PUT http://localhost:3000/events/2
+Content-Type: application/json
+
+{
+  "name": "test event 2",
+  "date": "2021/12/12"
+}
+
+### Index events
+GET http://localhost:3000/events
+Content-Type: application/json
+
+### Event Show
+GET http://localhost:3000/events/3
+Content-Type: application/json
+
+
