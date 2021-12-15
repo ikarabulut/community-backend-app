@@ -17,3 +17,34 @@ Content-Type: application/json
   "email": "test@test.com",
   "password": "password"
 }
+
+### Group Actions ###
+# Create Group
+POST http://localhost:3000/groups
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2Mzk2ODI2NTh9.xeq7MFg-Jd-1cZVOwBT6-zOwBc-d480CPOP2JR2Z1Gs
+
+{
+  "name": "test group",
+  "email": "testgroup@test.com",
+  "address": "123 test st",
+  "website": "www.test.com",
+  "mission_statement": "we are the best at testing"
+}
+
+### Index Groups
+GET http://localhost:3000/groups
+Content-Type: application/json
+
+### Update Group
+PUT http://localhost:3000/groups/1
+Content-Type: application/json
+
+{
+  "mission_statement": "we are really really really good at testing"
+}
+
+### Show Group
+GET http://localhost:3000/groups/1
+Content-Type: application/json
+
