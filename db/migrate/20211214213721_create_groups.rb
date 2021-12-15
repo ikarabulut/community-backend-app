@@ -7,6 +7,7 @@ class CreateGroups < ActiveRecord::Migration[6.1]
       t.string :address
       t.string :website
       t.text :mission_statement
+      t.boolean :archived, default: false
 
       t.timestamps
     end

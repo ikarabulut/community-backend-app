@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 2021_12_14_214153) do
 
   create_table "causes", force: :cascade do |t|
     t.string "cause"
+    t.boolean "archived", default: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -37,6 +38,7 @@ ActiveRecord::Schema.define(version: 2021_12_14_214153) do
     t.string "address"
     t.integer "volunteers_needed"
     t.text "description"
+    t.boolean "archived", default: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -55,6 +57,7 @@ ActiveRecord::Schema.define(version: 2021_12_14_214153) do
     t.string "address"
     t.string "website"
     t.text "mission_statement"
+    t.boolean "archived", default: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -69,6 +72,7 @@ ActiveRecord::Schema.define(version: 2021_12_14_214153) do
 
   create_table "tags", force: :cascade do |t|
     t.string "tag"
+    t.boolean "archived", default: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
