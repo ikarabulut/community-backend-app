@@ -25,4 +25,7 @@ Rails.application.routes.draw do
 
 ### cause routes ###
   post "/causes" => "causes#create"
+
+### group_causes routes ###
+  post "/groups/:group_id/causes" => "group_causes#create"
 end

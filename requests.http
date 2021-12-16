@@ -118,4 +118,14 @@ Content-Type: application/json
   "cause": "Test Cause"
 }
 
+### group_cause actions ###
+
+### Create group_cause
+POST http://localhost:3000/groups/1/causes
+Content-Type: application/json
+
+{
+  "cause_id": "1"
+}
+
 
