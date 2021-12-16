@@ -128,4 +128,23 @@ Content-Type: application/json
   "cause_id": "1"
 }
 
+### Tag actions ###
+
+### Create new Tag
+POST http://localhost:3000/tags
+Content-Type: application/json
+
+{
+  "tag": "indoor"
+}
+
+### Event Tag actions ###
+
+### Create new event_tag
+POST http://localhost:3000/events/1/tags
+Content-Type: application/json
+
+{
+  "tag_id": "2"
+}
 

@@ -28,4 +28,10 @@ Rails.application.routes.draw do
 
 ### group_causes routes ###
   post "/groups/:group_id/causes" => "group_causes#create"
+
+### tag routes ###
+  post "/tags" => "tags#create"
+
+### event_tag routes ###
+  post "/events/:event_id/tags" => "event_tags#create"
 end
