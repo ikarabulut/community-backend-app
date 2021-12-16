@@ -22,4 +22,7 @@ Rails.application.routes.draw do
   get "/rsvps" => "rsvps#index"
   get "/rsvps/:id" => "rsvps#show"
   put "/rsvps/:id" => "rsvps#update"
+
+### cause routes ###
+  post "/causes" => "causes#create"
 end

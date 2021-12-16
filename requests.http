@@ -108,4 +108,14 @@ Content-Type: application/json
   "rsvp_type": "Maybe"
 }
 
+### cause actions ###
+
+### Create Cause
+POST http://localhost:3000/causes
+Content-Type: application/json
+
+{
+  "cause": "Test Cause"
+}
+
 
