@@ -140,11 +140,11 @@ Content-Type: application/json
 
 ### Event Tag actions ###
 
-### Create new event_tag
+### Create new event_tag 
 POST http://localhost:3000/events/1/tags
 Content-Type: application/json
 
 {
-  "tag_id": "2"
+  "tag_id": "1"
 }
 
