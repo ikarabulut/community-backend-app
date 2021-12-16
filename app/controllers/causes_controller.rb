@@ -4,7 +4,7 @@ class CausesController < ApplicationController
       cause: params["cause"]
     )
     if cause.save
-      render json: cause.as_json
+      render json: cause
     else
       render json: {errors: cause.errors.full_messages}, status: :unprocessable_entity
     end

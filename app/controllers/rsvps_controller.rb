@@ -1,7 +1,7 @@
 class RsvpsController < ApplicationController
   def index
     rsvps = Rsvp.all
-    render json: rsvps.as_json
+    render json: rsvps
   end
 
   def create
@@ -11,7 +11,7 @@ class RsvpsController < ApplicationController
       rsvp_type: params["rsvp_type"]
     )
     if rsvp.save
-      render json: rsvp.as_json
+      render json: rsvp
     else
       render json: {errors: rsvp.errors.full_messages}, status: :unprocessable_entity
     end
@@ -19,14 +19,14 @@ class RsvpsController < ApplicationController
 
   def show
     rsvp = Rsvp.find_by(id: params["id"])
-    render json: rsvp.as_json
+    render json: rsvp
   end
 
   def update
     rsvp = Rsvp.find_by(id: params["id"])
     rsvp.rsvp_type = params["rsvp_type"] || rsvp.rsvp_type
     if rsvp.save
-      render json: {message: "Group successfully updated", params: rsvp.as_json}
+      render json: {message: "Group successfully updated", params: rsvp}
     else
       render json: {errors: rsvp.errors.full_messages}, status: 418
     end

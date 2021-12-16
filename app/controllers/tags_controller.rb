@@ -4,7 +4,7 @@ class TagsController < ApplicationController
       tag: params["tag"]
     )
     if tag.save
-      render json: tag.as_json
+      render json: tag
     else
       render json: {errors: tag.errors.full_messages}, status: :unprocessable_entity
     end

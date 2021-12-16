@@ -11,7 +11,7 @@ class EventsController < ApplicationController
       description: params["description"]
     )
     if event.save
-      render json: event.as_json
+      render json: event
     else
       render json: {errors: event.errors.full_messages}, status: :unprocessable_entity
     end
@@ -27,7 +27,7 @@ class EventsController < ApplicationController
     event.volunteers_needed = params["volunteers_needed"] || event.volunteers_needed
     event.description = params["description"] || event.description
     if event.save
-      render json: {message: "Event successfully updated", params: event.as_json}
+      render json: {message: "Event successfully updated", params: event}
     else
       render json: {errors: event.errors.full_messages}, status: 418
     end
@@ -35,12 +35,12 @@ class EventsController < ApplicationController
 
   def index
     events = Event.all
-    render json: events.as_json
+    render json: events
   end
 
   def show
     event = Event.find_by(id: params["id"])
-    render json: event.as_json
+    render json: event
   end
 
   def destroy

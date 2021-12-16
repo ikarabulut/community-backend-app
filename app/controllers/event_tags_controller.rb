@@ -5,7 +5,7 @@ class EventTagsController < ApplicationController
       tag_id: params["tag_id"]
     )
     if event_tag.save
-      render json: event_tag.as_json
+      render json: event_tag
     else
       render json: {errors: event_tag.errors.full_messages}, status: :unprocessable_entity
     end

@@ -10,7 +10,7 @@ class GroupsController < ApplicationController
       mission_statement: params["mission_statement"]
     )
     if group.save
-      render json: group.as_json
+      render json: group
     else
       render json: {errors: event.errors.full_messages}, status: :unprocessable_entity
     end
@@ -18,7 +18,7 @@ class GroupsController < ApplicationController
 
   def index
     groups = Group.all
-    render json: groups.as_json
+    render json: groups
   end
 
   def update
@@ -29,7 +29,7 @@ class GroupsController < ApplicationController
     group.website = params["website"] || group.website
     group.mission_statement = params["mission_statement"] || group.mission_statement
     if group.save
-      render json: {message: "Group successfully updated", params: group.as_json}
+      render json: {message: "Group successfully updated", params: group}
     else
       render json: {errors: group.errors.full_messages}, status: 418
     end
@@ -37,7 +37,7 @@ class GroupsController < ApplicationController
 
   def show
     group = Group.find_by(id: params["id"])
-    render json: group.as_json
+    render json: group
   end
 
 end

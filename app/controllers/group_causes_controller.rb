@@ -5,7 +5,7 @@ class GroupCausesController < ApplicationController
       cause_id: params["cause_id"]
     )
     if group_cause.save
-      render json: group_cause.as_json
+      render json: group_cause
     else
       render json: {errors: group_cause.errors.full_messages}, status: :unprocessable_entity
     end
