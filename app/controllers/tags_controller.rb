@@ -9,4 +9,10 @@ class TagsController < ApplicationController
       render json: {errors: tag.errors.full_messages}, status: :unprocessable_entity
     end
   end
+
+  def index
+    tags = Tag.all
+    render json: tags
+  end
+  
 end

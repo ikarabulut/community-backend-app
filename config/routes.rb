@@ -31,6 +31,7 @@ Rails.application.routes.draw do
 
 ### tag routes ###
   post "/tags" => "tags#create"
+  get "/tags" => "tags#index"
 
 ### event_tag routes ###
   post "/events/:event_id/tags" => "event_tags#create"
