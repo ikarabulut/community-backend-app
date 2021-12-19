@@ -1,7 +1,8 @@
 class EventsController < ApplicationController
   def create
+    group_id = Group.find_by(id: params["group_id"])
     event = Event.new(
-      group_id: params["group_id"],
+      group_id: group_id.id,
       name: params["name"],
       date: params["date"],
       start_time: params["start_time"],

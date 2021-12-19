@@ -22,7 +22,7 @@ Content-Type: application/json
 # Create Group
 POST http://localhost:3000/groups
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2Mzk4NDkxNjF9.O86TBbabwH9NkGpsQY8z3Qs_ZjFNU-rpTnd0N6Z4808
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2Mzk5NzExMDV9.R06-a05ETE6ntYrCfaCtSdN0ZK6ntS4dWtHte95ZHhQ
 
 {
   "name": "test group",
