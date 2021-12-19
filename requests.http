@@ -135,13 +135,13 @@ POST http://localhost:3000/tags
 Content-Type: application/json
 
 {
-  "tag": "indoor"
+  "tag": "test"
 }
 
 ### Event Tag actions ###
 
 ### Create new event_tag 
-POST http://localhost:3000/events/1/tags
+POST http://localhost:3000/events/2/tags
 Content-Type: application/json
 
 {
@@ -153,3 +153,6 @@ GET http://localhost:3000/tags
 Content-Type: application/json
 
 
+### Index Events Tags
+GET http://localhost:3000/events/1/tags
+Content-Type: application/json
