@@ -77,6 +77,10 @@ Content-Type: application/json
 GET http://localhost:3000/events
 Content-Type: application/json
 
+### Index Groups events
+GET http://localhost:3000/groups/1/events
+Content-Type: application/json
+
 ### Event Show
 GET http://localhost:3000/events/2
 Content-Type: application/json
