@@ -83,6 +83,12 @@ Content-Type: application/json
 GET http://localhost:3000/events
 Content-Type: application/json
 
+
+### User Index Events
+GET http://localhost:3000/users/events
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VyX25hbWUiOiJJc21haWwgS2FyYWJ1bHV0IiwiZXhwIjoxNjQwMjkxOTYxfQ.yJgBAvKGcPl237Shw8k57EwjjoUbRiyklgp2PHc5okU
+
 ### Index Groups events
 GET http://localhost:3000/groups/1/events
 Content-Type: application/json

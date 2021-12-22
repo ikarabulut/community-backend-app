@@ -41,6 +41,11 @@ class EventsController < ApplicationController
     render json: events
   end
 
+  def user_events
+    events = current_user.events
+    render json: events
+  end
+
   def group_events_index
     group = Group.find_by(id: params["group_id"])
     groups_events = Event.where(group_id: group.id)
