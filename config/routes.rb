@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get "/groups" => "groups#index"
   put "/groups/:id" => "groups#update"
   get "/groups/:id" => "groups#show"
+  get "/users/groups" => "groups#user_groups"
 
 ### Event Routes ###
   post "/groups/:group_id/events" => "events#create"

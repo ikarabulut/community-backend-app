@@ -18,6 +18,11 @@ class GroupsController < ApplicationController
     end
   end
 
+  def user_groups
+    groups = current_user.groups
+    render json: groups
+  end
+
   def index
     groups = Group.all
     render json: groups
