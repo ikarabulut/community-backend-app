@@ -7,7 +7,9 @@ class GroupsController < ApplicationController
       email: params["email"],
       address: params["address"],
       website: params["website"],
-      mission_statement: params["mission_statement"]
+      mission_statement: params["mission_statement"],
+      image_url: params["image_url"],
+      description: params["description"]
     )
     if group.save
       render json: group
@@ -28,6 +30,8 @@ class GroupsController < ApplicationController
     group.address = params["address"] || group.address
     group.website = params["website"] || group.website
     group.mission_statement = params["mission_statement"] || group.mission_statement
+    group.image_url = params["image_url"] || group.image_url
+    group.description = params["description"] || group.description
     if group.save
       render json: {message: "Group successfully updated", params: group}
     else
