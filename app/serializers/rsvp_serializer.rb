@@ -1,5 +1,6 @@
 class RsvpSerializer < ActiveModel::Serializer
-  attributes :id, :event_id, :rsvp_type
   belongs_to :event
   belongs_to :user
+  attributes :id, :event_id, :user_id, :rsvp_type, :event, :user
+
 end

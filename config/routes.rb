@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 ### User Routes ###
   post "/users" => "users#create"
+  get "/users" => "users#show"
 
 ### Session Routes ###
   post "/sessions" => "sessions#create"
