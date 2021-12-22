@@ -9,7 +9,8 @@ class EventsController < ApplicationController
       duration: params["duration"],
       address: params["address"],
       volunteers_needed: params["volunteers_needed"],
-      description: params["description"]
+      description: params["description"],
+      image_url: params["image_url"]
     )
     if event.save
       render json: event
@@ -27,6 +28,7 @@ class EventsController < ApplicationController
     event.address = params["address"] || event.address
     event.volunteers_needed = params["volunteers_needed"] || event.volunteers_needed
     event.description = params["description"] || event.description
+    event.image_url = params["image_url"] || event.image_url
     if event.save
       render json: {message: "Event successfully updated", params: event}
     else
